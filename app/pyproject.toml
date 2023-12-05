@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "flower-marketplace"
+version = "0.1.0"
+description = ""
+authors = ["Akbota <aqbotamaratqyzy@example.com>"]
+readme = "README.md"
+packages = [{include = "flower_marketplace"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.100.0"
+python-multipart = "^0.0.6"
+jinja2 = "^3.1.2"
+uvicorn = "^0.23.0"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+attrs = "^23.1.0"
+pytest = "^7.4.0"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

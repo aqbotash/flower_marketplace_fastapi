@@ -1,0 +1,24 @@
+<div>
+    <form action = '/flowers' method = 'post'>
+        Flower Name:<br>
+        <input type = 'text' name = 'name'><br>
+        Flower count:<br>
+        <input type = 'text' name = 'count'><br>
+        Flower price:<br>
+        <input type = 'text' name = 'cost'><br>
+        <input type = 'submit' value = 'add'><br>
+    </form>
+</div>
+<ul>
+    {%for flower in flowers%}
+    <p>
+        Flower name: {{flower.name}}<br>
+        Flower price: {{flower.cost}}<br>
+        Flwoer count: {{flower.count}}<br>
+    </p>
+    <form action="/cart/items" method="post">
+        <input type="hidden" name="flower_id" value="{{ flower.id }}">
+        <button type="submit">Add to Cart</button>
+    </form>
+    {%endfor%}
+</ul>

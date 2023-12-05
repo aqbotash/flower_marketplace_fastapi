@@ -1,0 +1,11 @@
+{%for flower in flowers%}
+<p>
+ID: {{flower.id}}
+Name: {{flower.name}}
+Cost: {{flower.cost}}
+Count: {{flower.count}}
+{%endfor%}
+<h2>Total: {{total_price}}</h2>
+<form action = '/purchased' method = 'post'>
+    <input type = 'submit' value = 'purchase'>
+</form>
